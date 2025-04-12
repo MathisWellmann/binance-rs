@@ -121,6 +121,9 @@ pub enum Filters {
         min_trailing_below_delta: Option<u16>,
         max_trailing_below_delta: Option<u16>,
     },
+    #[serde(rename = "POSITION_RISK_CONTROL")]
+    #[serde(rename_all = "camelCase")]
+    PositionRiskControl { position_control_side: String },
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
